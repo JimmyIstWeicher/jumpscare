@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -13,6 +13,12 @@ import {Howl} from 'howler';
 })
 export class AppComponent {
   title = 'jumpscare';
+
+  @HostListener('window:beforeunload', ['$event'])
+  unloadNotification($event: any): void {
+    const dialogText = 'Do you really want to leave this site?';
+    $event.returnValue = dialogText;
+  }
 
   onButtonClick(): void {
     console.log("clicked");
