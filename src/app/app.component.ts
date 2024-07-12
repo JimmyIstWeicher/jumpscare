@@ -28,6 +28,7 @@ export class AppComponent {
     scareElement.style.display = "block";
     document.documentElement.requestFullscreen();
     let sound = new Howl({
+      html5: true,
       loop: true,
       volume: 5,
       src: ['moaning.mp3']
