@@ -1,0 +1,27 @@
+#main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/images/teddys.jpg);
+}
+
+#content{
+    width: 65vw;
+}
+
+#scare{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../assets/images/scary.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    background-size: cover;
+}
+
+button{
+    margin-right: 12px;
+}
